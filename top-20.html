@@ -25,10 +25,11 @@
     }
 
     h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 48px;
-      margin-bottom: 15px;
-    }
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 56px;
+  letter-spacing: -1px;
+  margin-bottom: 40px;
+}
 
     .movie {
       display: flex;
@@ -38,10 +39,16 @@
     }
 
     .movie img {
-      width: 200px;
-      height: auto;
-      border: 1px solid #ddd;
-    }
+  width: 200px;
+  height: auto;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
 
     .movie-content {
       max-width: 650px;
