@@ -4,8 +4,8 @@
   <title>Screen Jury</title>
   <meta charset="UTF-8">
 
-  <!-- Graffiti-style font -->
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <!-- Strong modern font -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -16,20 +16,18 @@
       background-size: 4px 4px;
       margin: 0;
       color: #111;
-      font-family: Arial, sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
     }
 
-    /* HEADER */
     .header {
       text-align: center;
-      padding-top: 40px;
+      padding: 40px 20px 20px 20px;
     }
 
     .logo {
-      font-family: 'Permanent Marker', cursive;
-      font-size: 48px;
+      font-size: 34px;
+      font-weight: 700;
       letter-spacing: 2px;
-      margin-bottom: 8px;
     }
 
     .motto {
@@ -40,20 +38,20 @@
       margin-top: 6px;
     }
 
-    /* NAVIGATION */
     .nav {
-      margin-top: 25px;
-      font-size: 14px;
-      font-family: Arial, sans-serif;
+      margin-top: 28px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     .nav a {
       text-decoration: none;
       color: #111;
-      margin: 0 18px;
+      margin: 0 22px;
       position: relative;
       padding-bottom: 4px;
-      transition: 0.3s;
+      transition: 0.2s;
     }
 
     .nav a:hover {
@@ -68,7 +66,7 @@
       left: 0;
       bottom: 0;
       background-color: #a67c2d;
-      transition: 0.3s;
+      transition: 0.2s;
     }
 
     .nav a:hover::after {
@@ -78,50 +76,62 @@
     hr {
       border: none;
       border-top: 1px solid #ddd8cc;
-      margin: 25px 0;
+      margin: 30px 0;
     }
 
     .content {
-      max-width: 820px;
+      max-width: 900px;
       margin: auto;
       padding: 60px 40px;
       font-family: Georgia, serif;
     }
 
+    .featured-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+
     .card {
-  background: rgba(255,255,255,0.6);
-  padding: 30px;
-  margin-top: 20px;
-  border: 1px solid #e5e0d4;
-  transition: 0.3s;
-}
+      background: rgba(255,255,255,0.6);
+      border: 1px solid #e5e0d4;
+      padding: 40px;
+      transition: 0.3s;
+    }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
 
-.card h3 {
-  margin-top: 0;
-  font-size: 20px;
-}
+    .card h2 {
+      font-size: 28px;
+      margin-top: 0;
+      font-family: 'Space Grotesk', sans-serif;
+    }
 
-.card a {
-  text-decoration: none;
-  color: #a67c2d;
-  font-weight: bold;
-}
-    
+    .card p {
+      font-size: 16px;
+      color: #444;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #a67c2d;
+    }
+
   </style>
 </head>
 
 <body>
 
   <div class="header">
-
-    <div class="logo">
-      SCREEN JURY
-    </div>
+    <div class="logo">SCREEN JURY</div>
 
     <div class="motto">
       Movies don’t need hype. They need judgment.
@@ -139,18 +149,18 @@
 
   <div class="content">
 
-  <h2 style="font-family: Arial, sans-serif;">Featured</h2>
+    <div class="featured-title">Featured</div>
 
-  <div class="card">
-    <h3>Top 20 Must-Watch Movies of a Lifetime</h3>
-    <p>
-      A ranked list of the most essential films ever made.
-      From timeless classics to modern masterpieces.
-    </p>
-    <a href="#">Read Now →</a>
+    <div class="card">
+      <h2>Top 20 Must-Watch Movies of a Lifetime</h2>
+      <p>
+        A ranked list of films that define cinema. No nostalgia bias. No hype.
+        Just judgment.
+      </p>
+      <a href="#">Read Now →</a>
+    </div>
+
   </div>
-
-</div>
 
 </body>
 </html>
