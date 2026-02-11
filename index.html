@@ -4,8 +4,8 @@
   <title>Screen Jury</title>
   <meta charset="UTF-8">
 
-  <!-- Handwritten Gen-Z font -->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <!-- Modern rounded Gen-Z font -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -15,19 +15,20 @@
         linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
       background-size: 4px 4px;
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: #1c1c1c;
+      color: #111;
+      font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
+    /* HEADER */
     .header {
       text-align: center;
-      padding-top: 40px;
-      position: relative;
+      padding-top: 35px;
     }
 
     .logo {
-      font-family: 'Pacifico', cursive;
-      font-size: 42px;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1px;
       display: inline-block;
       position: relative;
     }
@@ -35,35 +36,36 @@
     .logo .jury {
       position: relative;
       display: inline-block;
+      margin-left: 4px;
     }
 
-    /* Pencil positioned at the edge of Y */
+    /* Pencil positioned properly */
     .pencil {
       position: absolute;
-      right: -28px;
-      top: 8px;
-      font-size: 28px;
-      transform: rotate(180deg);
+      right: -20px;
+      top: 6px;
+      font-size: 20px;
+      transform: rotate(210deg); /* facing lower left */
     }
 
     .motto {
       font-family: Georgia, serif;
       font-style: italic;
-      font-size: 16px;
+      font-size: 14px;
       color: #666;
-      margin-top: 8px;
+      margin-top: 6px;
     }
 
+    /* NAVIGATION */
     .nav {
-      margin-top: 25px;
+      margin-top: 22px;
+      font-size: 14px;
     }
 
     .nav a {
       text-decoration: none;
-      color: #1c1c1c;
+      color: #111;
       margin: 0 18px;
-      font-size: 14px;
-      letter-spacing: 1px;
       position: relative;
       padding-bottom: 4px;
       transition: 0.3s;
@@ -91,11 +93,11 @@
     hr {
       border: none;
       border-top: 1px solid #ddd8cc;
-      margin: 30px 0;
+      margin: 25px 0;
     }
 
     .content {
-      max-width: 800px;
+      max-width: 820px;
       margin: auto;
       padding: 60px 40px;
       font-family: Georgia, serif;
