@@ -4,8 +4,8 @@
   <title>Screen Jury</title>
   <meta charset="UTF-8">
 
-  <!-- Google Font for soft bubble feel -->
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Handwritten Bubble Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -14,52 +14,59 @@
         linear-gradient(0deg, rgba(0,0,0,0.025) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
       background-size: 4px 4px;
-      color: #1c1c1c;
       margin: 0;
       padding: 0;
+      color: #1c1c1c;
+    }
+
+    .logo {
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 60px;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .screen {
+      font-size: 90px;
+      margin: 0;
+      color: #111;
+      letter-spacing: 6px;
+      text-shadow: 4px 4px 0px #a67c2d;
+    }
+
+    .jury {
+      font-size: 90px;
+      margin: 0;
+      color: #a67c2d;
+      letter-spacing: 6px;
+      text-shadow: 4px 4px 0px #111;
+      transform: rotate(-3deg);
+      display: inline-block;
+      position: relative;
+    }
+
+    .jury::after {
+      content: " ✏️";
+      font-size: 50px;
+      margin-left: 15px;
+      transform: rotate(20deg);
+      display: inline-block;
+    }
+
+    .tagline {
+      text-align: center;
       font-family: Georgia, serif;
+      font-style: italic;
+      margin-top: 40px;
+      color: #666;
+      font-size: 18px;
     }
 
     .container {
-      max-width: 850px;
+      max-width: 800px;
       margin: auto;
-      padding: 80px 40px;
-      line-height: 1.8;
-    }
-
-    /* GEN Z LOGO */
-    .logo {
-      text-align: center;
-      margin-top: 60px;
-      margin-bottom: 100px;
-      font-family: 'Baloo 2', cursive;
-    }
-
-    .logo .screen {
-      font-size: 72px;
-      margin: 0;
-      color: #1c1c1c;
-      letter-spacing: 4px;
-      text-shadow: 3px 3px 0px #a67c2d;
-    }
-
-    .logo .jury {
-      font-size: 72px;
-      margin: 0;
-      color: #a67c2d;
-      letter-spacing: 4px;
-      text-shadow: 3px 3px 0px #1c1c1c;
-      position: relative;
-      display: inline-block;
-      transform: rotate(-2deg);
-    }
-
-    .logo .jury::after {
-      content: " ✏";
-      font-size: 40px;
-      margin-left: 10px;
-      color: #1c1c1c;
-      transform: rotate(15deg);
+      padding: 60px 40px;
+      font-family: Georgia, serif;
     }
 
     h2 {
@@ -67,7 +74,7 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #a67c2d;
-      margin-top: 60px;
+      margin-top: 70px;
     }
 
     a {
@@ -87,15 +94,6 @@
       border: none;
       border-top: 1px solid #ddd8cc;
       margin: 60px 0;
-    }
-
-    .tagline {
-      text-align: center;
-      font-style: italic;
-      color: #6b6b6b;
-      margin-top: -60px;
-      margin-bottom: 80px;
-      font-size: 18px;
     }
 
   </style>
