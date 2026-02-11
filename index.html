@@ -4,8 +4,8 @@
   <title>Screen Jury</title>
   <meta charset="UTF-8">
 
-  <!-- Soft modern bubbly font -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Handwritten Gen-Z font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -15,25 +15,35 @@
         linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
       background-size: 4px 4px;
       margin: 0;
-      font-family: 'Outfit', sans-serif;
+      font-family: Arial, sans-serif;
       color: #1c1c1c;
     }
 
-    /* HEADER SECTION */
     .header {
       text-align: center;
       padding-top: 40px;
+      position: relative;
     }
 
     .logo {
-      font-size: 32px;
-      font-weight: 700;
-      letter-spacing: 2px;
+      font-family: 'Pacifico', cursive;
+      font-size: 42px;
+      display: inline-block;
+      position: relative;
     }
 
-    .logo span {
-      color: #a67c2d;
-      margin-left: 6px;
+    .logo .jury {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Pencil positioned at the edge of Y */
+    .pencil {
+      position: absolute;
+      right: -28px;
+      top: 8px;
+      font-size: 28px;
+      transform: rotate(180deg);
     }
 
     .motto {
@@ -44,17 +54,15 @@
       margin-top: 8px;
     }
 
-    /* NAVIGATION */
     .nav {
-      margin-top: 30px;
-      text-align: center;
+      margin-top: 25px;
     }
 
     .nav a {
       text-decoration: none;
       color: #1c1c1c;
-      margin: 0 20px;
-      font-size: 15px;
+      margin: 0 18px;
+      font-size: 14px;
       letter-spacing: 1px;
       position: relative;
       padding-bottom: 4px;
@@ -99,8 +107,11 @@
 <body>
 
   <div class="header">
+
     <div class="logo">
-      SCREEN JURY <span>✏</span>
+      SCREEN <span class="jury">JURY
+        <span class="pencil">✏️</span>
+      </span>
     </div>
 
     <div class="motto">
