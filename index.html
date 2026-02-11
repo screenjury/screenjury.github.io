@@ -4,8 +4,8 @@
   <title>Screen Jury</title>
   <meta charset="UTF-8">
 
-  <!-- Handwritten Bubble Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Soft modern bubbly font -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -15,85 +15,82 @@
         linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
       background-size: 4px 4px;
       margin: 0;
-      padding: 0;
+      font-family: 'Outfit', sans-serif;
       color: #1c1c1c;
+    }
+
+    /* HEADER SECTION */
+    .header {
+      text-align: center;
+      padding-top: 40px;
     }
 
     .logo {
-      text-align: center;
-      margin-top: 100px;
-      margin-bottom: 60px;
-      font-family: 'Fredoka', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 2px;
     }
 
-    .screen {
-      font-size: 90px;
-      margin: 0;
-      color: #111;
-      letter-spacing: 6px;
-      text-shadow: 4px 4px 0px #a67c2d;
-    }
-
-    .jury {
-      font-size: 90px;
-      margin: 0;
+    .logo span {
       color: #a67c2d;
-      letter-spacing: 6px;
-      text-shadow: 4px 4px 0px #111;
-      transform: rotate(-3deg);
-      display: inline-block;
-      position: relative;
+      margin-left: 6px;
     }
 
-    .jury::after {
-      content: " ✏️";
-      font-size: 50px;
-      margin-left: 15px;
-      transform: rotate(20deg);
-      display: inline-block;
-    }
-
-    .tagline {
-      text-align: center;
+    .motto {
       font-family: Georgia, serif;
       font-style: italic;
-      margin-top: 40px;
-      color: #666;
-      font-size: 18px;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 60px 40px;
-      font-family: Georgia, serif;
-    }
-
-    h2 {
       font-size: 16px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #a67c2d;
-      margin-top: 70px;
+      color: #666;
+      margin-top: 8px;
     }
 
-    a {
+    /* NAVIGATION */
+    .nav {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .nav a {
       text-decoration: none;
       color: #1c1c1c;
-      border-bottom: 1px solid #a67c2d;
-      padding-bottom: 2px;
+      margin: 0 20px;
+      font-size: 15px;
+      letter-spacing: 1px;
+      position: relative;
+      padding-bottom: 4px;
       transition: 0.3s;
-      font-size: 18px;
     }
 
-    a:hover {
+    .nav a:hover {
       color: #a67c2d;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background-color: #a67c2d;
+      transition: 0.3s;
+    }
+
+    .nav a:hover::after {
+      width: 100%;
     }
 
     hr {
       border: none;
       border-top: 1px solid #ddd8cc;
-      margin: 60px 0;
+      margin: 30px 0;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: auto;
+      padding: 60px 40px;
+      font-family: Georgia, serif;
     }
 
   </style>
@@ -101,29 +98,31 @@
 
 <body>
 
-  <div class="logo">
-    <div class="screen">SCREEN</div>
-    <div class="jury">JURY</div>
-  </div>
+  <div class="header">
+    <div class="logo">
+      SCREEN JURY <span>✏</span>
+    </div>
 
-  <div class="tagline">
-    Movies don’t need hype. They need judgment.
-  </div>
+    <div class="motto">
+      Movies don’t need hype. They need judgment.
+    </div>
 
-  <div class="container">
+    <div class="nav">
+      <a href="#">About</a>
+      <a href="#">Movies</a>
+      <a href="#">TV Shows</a>
+      <a href="#">Watch</a>
+    </div>
 
     <hr>
+  </div>
 
-    <h2>Featured</h2>
+  <div class="content">
+
+    <h3>Featured</h3>
 
     <p>
-      <a href="top-20.html">Top 20 Must-Watch Movies of a Lifetime</a>
-    </p>
-
-    <hr>
-
-    <p style="text-align:center;">
-      <a href="about.html">About Screen Jury</a>
+      Top 20 Must-Watch Movies of a Lifetime
     </p>
 
   </div>
