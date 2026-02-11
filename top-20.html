@@ -1,28 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Top 20 Must-Watch Movies of a Lifetime | Screen Jury</title>
+  <title>Top 20 Must-Watch Movies | Screen Jury</title>
   <meta charset="UTF-8">
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f3f1ea;
+      background-image:
+        linear-gradient(0deg, rgba(0,0,0,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
+      background-size: 4px 4px;
+      margin: 0;
+      color: #111;
+      font-family: Georgia, serif;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      font-size: 18px;
+      max-width: 700px;
+      margin-bottom: 60px;
+    }
+
+    .movie {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 80px;
+      align-items: flex-start;
+    }
+
+    .movie img {
+      width: 180px;
+      height: auto;
+      border: 1px solid #ddd;
+    }
+
+    .movie-content {
+      max-width: 600px;
+    }
+
+    .movie-content h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 28px;
+      margin: 0 0 10px 0;
+    }
+
+    .rank {
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #a67c2d;
+      margin-bottom: 8px;
+    }
+
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 40px;">
 
-<h1>Top 20 Must-Watch Movies of a Lifetime</h1>
+<body>
 
-<p>
-Some films entertain for a night.  
-Others stay with you forever.  
-This is a ranked list of twenty films that define what cinema is capable of.
-</p>
+  <div class="container">
 
-<hr>
+    <h1>Top 20 Must-Watch Movies of a Lifetime</h1>
 
-<h2>#20. (Add Movie Name)</h2>
-<p><strong>Final Verdict:</strong> X.X / 10</p>
-<p>Why it’s here: </p>
+    <div class="intro">
+      Ranked in ascending order.  
+      These films are not trending picks.  
+      They are cultural benchmarks.
+    </div>
 
-<!-- Repeat this block up to #1 -->
+    <!-- MOVIE BLOCK START -->
 
-<p><a href="index.html">← Back to Home</a></p>
+    <div class="movie">
+      <img src="images/movie20.jpg" alt="Movie Poster">
+      <div class="movie-content">
+        <div class="rank">#20</div>
+        <h2>Movie Title (Year)</h2>
+        <p>
+          Short, sharp explanation of why this film earns its place.
+          No fluff. No fan worship.
+        </p>
+      </div>
+    </div>
+
+    <!-- Duplicate above block for #19 to #1 -->
+
+  </div>
 
 </body>
 </html>
