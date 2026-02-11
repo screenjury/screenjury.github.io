@@ -88,6 +88,30 @@
       font-family: Georgia, serif;
     }
 
+    .card {
+  background: rgba(255,255,255,0.6);
+  padding: 30px;
+  margin-top: 20px;
+  border: 1px solid #e5e0d4;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.card a {
+  text-decoration: none;
+  color: #a67c2d;
+  font-weight: bold;
+}
+    
   </style>
 </head>
 
@@ -115,13 +139,18 @@
 
   <div class="content">
 
-    <h3>Featured</h3>
+  <h2 style="font-family: Arial, sans-serif;">Featured</h2>
 
+  <div class="card">
+    <h3>Top 20 Must-Watch Movies of a Lifetime</h3>
     <p>
-      Top 20 Must-Watch Movies of a Lifetime
+      A ranked list of the most essential films ever made.
+      From timeless classics to modern masterpieces.
     </p>
-
+    <a href="#">Read Now →</a>
   </div>
+
+</div>
 
 </body>
 </html>
