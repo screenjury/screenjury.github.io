@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Top 20 Must-Watch Movies | Screen Jury</title>
+  <title>Must Watches | Screen Jury</title>
   <meta charset="UTF-8">
 
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -27,44 +27,54 @@
     h1 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 48px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .intro {
       font-size: 18px;
-      max-width: 700px;
       margin-bottom: 60px;
+      max-width: 700px;
     }
 
     .movie {
       display: flex;
       gap: 40px;
-      margin-bottom: 80px;
+      margin-bottom: 90px;
       align-items: flex-start;
     }
 
     .movie img {
-      width: 180px;
+      width: 200px;
       height: auto;
       border: 1px solid #ddd;
     }
 
     .movie-content {
-      max-width: 600px;
+      max-width: 650px;
+    }
+
+    .rank {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #a67c2d;
+      margin-bottom: 10px;
     }
 
     .movie-content h2 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 28px;
-      margin: 0 0 10px 0;
+      font-size: 30px;
+      margin: 0 0 12px 0;
     }
 
-    .rank {
-      font-size: 14px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #a67c2d;
-      margin-bottom: 8px;
+    .score {
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    .verdict {
+      color: #555;
+      margin-bottom: 12px;
     }
 
   </style>
@@ -74,29 +84,31 @@
 
   <div class="container">
 
-    <h1>Top 20 Must-Watch Movies of a Lifetime</h1>
+    <h1>Must Watches</h1>
 
     <div class="intro">
       Ranked in ascending order.  
-      These films are not trending picks.  
-      They are cultural benchmarks.
+      These films define cultural weight, emotional impact,
+      and cinematic integrity.
     </div>
 
-    <!-- MOVIE BLOCK START -->
+    <!-- Example Movie Block -->
 
     <div class="movie">
-      <img src="images/movie20.jpg" alt="Movie Poster">
+      <img src="images/shawshank.jpg" alt="The Shawshank Redemption Poster">
       <div class="movie-content">
-        <div class="rank">#20</div>
-        <h2>Movie Title (Year)</h2>
+        <div class="rank">#1</div>
+        <h2>The Shawshank Redemption (1994)</h2>
+        <div class="score">Final Verdict: 9.6 / 10</div>
+        <div class="verdict">Verdict: Timeless Human Triumph</div>
         <p>
-          Short, sharp explanation of why this film earns its place.
-          No fluff. No fan worship.
+          A film that earns its emotional weight without manipulation.
+          Enduring because it trusts character over spectacle.
         </p>
       </div>
     </div>
 
-    <!-- Duplicate above block for #19 to #1 -->
+    <!-- Duplicate this block for all other films -->
 
   </div>
 
