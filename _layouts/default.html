@@ -71,6 +71,30 @@
       max-width: 1000px;
     }
 
+.movie {
+  margin-bottom: 60px;
+}
+
+.movie h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.movie img {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+    
     @media (max-width: 768px) {
       .header {
         flex-direction: column;
