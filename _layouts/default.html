@@ -179,21 +179,39 @@
       }
 
 .romantic-page {
-  background: linear-gradient(to bottom, #f7efe9, #f3f1ea);
+  background: radial-gradient(circle at top center, rgba(214,142,158,0.15), transparent 60%),
+              #f3f1ea;
 }
 
 .romantic-page h1 {
-  color: #a45c6c;
+  font-family: 'Georgia', serif;
+  color: #9c4f63;
+  letter-spacing: 1px;
 }
 
 .romantic-page .rank-number {
-  color: #a45c6c;
+  color: #c26a82;
 }
 
 .romantic-page .movie:hover {
-  box-shadow: 0 15px 40px rgba(164,92,108,0.08);
-}     
-    }
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(156,79,99,0.12);
+}
+
+.romantic-page .content {
+  animation: fadeInRomantic 0.8s ease forwards;
+}
+
+@keyframes fadeInRomantic {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   </style>
 </head>
 
