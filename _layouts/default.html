@@ -11,6 +11,38 @@
 html {
   scroll-behavior: smooth;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 180px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.08);
+  padding: 12px 0;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #111;
+  font-size: 13px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f3f1ea;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
     
     body {
       background-color: #f3f1ea;
@@ -161,10 +193,20 @@ html {
     </div>
   </div>
 
-  <div class="nav">
-    <a href="{{ '/about.html' | relative_url }}">About</a>
-    <a href="{{ '/top-20.html' | relative_url }}">Movies</a>
-    <a href="{{ '/tv-shows.html' | relative_url }}">TV Shows</a>
+ <div class="nav">
+  <a href="{{ '/about.html' | relative_url }}">About</a>
+  <a href="{{ '/top-20.html' | relative_url }}">Movies</a>
+  <a href="{{ '/tv-shows.html' | relative_url }}">TV Shows</a>
+
+  <div class="dropdown">
+    <span>Genres</span>
+    <div class="dropdown-content">
+      <a href="{{ '/psychological.html' | relative_url }}">Psychological</a>
+      <a href="{{ '/drama.html' | relative_url }}">Drama</a>
+      <a href="{{ '/sports.html' | relative_url }}">Sports</a>
+      <a href="{{ '/comedy.html' | relative_url }}">Comedy</a>
+      <a href="{{ '/scifi.html' | relative_url }}">Sci-Fi</a>
+    </div>
   </div>
 </div>
 
