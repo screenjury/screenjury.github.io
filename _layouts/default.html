@@ -179,27 +179,79 @@
       }
 
 .romantic-page {
-  background: radial-gradient(circle at top center, rgba(214,142,158,0.15), transparent 60%),
-              #f3f1ea;
+  background: #f5ecef;
 }
 
-.romantic-page h1 {
+/* Hero Section */
+.romantic-hero {
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e8c7d0, #f5ecef);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+.romantic-overlay {
+  text-align: center;
+  z-index: 2;
+}
+
+.romantic-hero h1 {
   font-family: 'Georgia', serif;
-  color: #9c4f63;
-  letter-spacing: 1px;
+  font-size: 60px;
+  color: #7a2e43;
+  margin-bottom: 15px;
 }
 
-.romantic-page .rank-number {
-  color: #c26a82;
+.romantic-hero p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #5e3a44;
+}
+
+/* Soft floating glow */
+.romantic-hero::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 70%);
+  top: -200px;
+  left: -200px;
+  animation: romanticFloat 8s ease-in-out infinite alternate;
+}
+
+@keyframes romanticFloat {
+  from { transform: translateY(0px); }
+  to { transform: translateY(40px); }
+}
+
+/* Romantic Movie Cards */
+.romantic-page .movie {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  border: none;
+  box-shadow: 0 8px 30px rgba(122,46,67,0.08);
+  margin-bottom: 50px;
+  transition: all 0.3s ease;
 }
 
 .romantic-page .movie:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 45px rgba(156,79,99,0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 50px rgba(122,46,67,0.15);
 }
 
-.romantic-page .content {
-  animation: fadeInRomantic 0.8s ease forwards;
+.romantic-page .rank-number {
+  color: #a2455c;
+}
+
+.romantic-page h2 {
+  color: #6a2b3d;
 }
 
 @keyframes fadeInRomantic {
