@@ -11,9 +11,63 @@
     body {
       background-color: #f3f1ea;
       margin: 0;
-      font-family: 'Space Grotesk', sans-serif;
       color: #111;
-      padding: 80px 40px;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 60px;
+    }
+
+    .logo {
+      font-size: 68px;
+      font-weight: 700;
+      line-height: 0.9;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      display: block;
+    }
+
+    .motto {
+      margin-top: 18px;
+      font-size: 18px;
+      max-width: 420px;
+      font-weight: 500;
+    }
+
+    .nav {
+      text-align: right;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav a {
+      display: block;
+      text-decoration: none;
+      color: #111;
+      margin-bottom: 12px;
+      transition: 0.2s;
+    }
+
+    .nav a:hover {
+      color: #a67c2d;
+      transform: translateX(-4px);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd8cc;
+      margin: 0 60px;
+    }
+
+    .content {
+      padding: 100px 60px;
       max-width: 900px;
     }
 
@@ -27,10 +81,57 @@
       line-height: 1.6;
       margin-bottom: 20px;
     }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        padding: 30px;
+      }
+
+      .logo {
+        font-size: 42px;
+      }
+
+      .nav {
+        text-align: left;
+        margin-top: 20px;
+      }
+
+      .content {
+        padding: 60px 25px;
+      }
+    }
+
   </style>
 </head>
 
 <body>
+
+<div class="header">
+  <div>
+    <div class="logo">
+      <a href="index.html" style="text-decoration:none; color:inherit;">
+        <span>SCREEN</span>
+        <span>JURY</span>
+      </a>
+    </div>
+
+    <div class="motto">
+      No hype. Just cinema.
+    </div>
+  </div>
+
+  <div class="nav">
+    <a href="about.html">About</a>
+    <a href="top-20.html">Movies</a>
+    <a href="#">TV Shows</a>
+    <a href="#">Watch</a>
+  </div>
+</div>
+
+<hr>
+
+<div class="content">
 
 <h1>About Screen Jury</h1>
 
@@ -51,6 +152,8 @@ This is a trust platform.
 <p>
 If it’s here, it’s worth your time.
 </p>
+
+</div>
 
 </body>
 </html>
