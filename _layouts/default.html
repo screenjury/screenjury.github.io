@@ -8,23 +8,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      background-color: #f3f1ea;
       margin: 0;
       color: #111;
       font-family: 'Space Grotesk', sans-serif;
+      background: #f3f1ea;
     }
+
+    /* ================= HEADER ================= */
 
     .header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       padding: 60px;
-      position: relative;
     }
 
     .logo {
@@ -34,9 +34,7 @@
       letter-spacing: -1px;
     }
 
-    .logo span {
-      display: block;
-    }
+    .logo span { display: block; }
 
     .motto {
       margin-top: 18px;
@@ -51,7 +49,6 @@
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      position: relative;
     }
 
     .nav a, .nav span {
@@ -85,12 +82,11 @@
       display: block;
       padding: 10px 20px;
       font-size: 13px;
-      text-decoration: none;
       color: #111;
     }
 
-    .dropdown-content a:hover {
-      background-color: #f3f1ea;
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
 
     hr {
@@ -104,41 +100,58 @@
       max-width: 1100px;
     }
 
+    /* ================= MOVIES ================= */
+
     .movie {
       display: flex;
       gap: 40px;
       align-items: flex-start;
       margin-bottom: 80px;
-      padding-bottom: 40px;
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
+      padding: 30px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
     }
 
     .movie:hover {
-      transform: translateY(-3px);
+      transform: translateY(-6px);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.12);
     }
 
     .movie img {
       width: 180px;
-      border: 1px solid #ddd;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
     }
 
-    .movie img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    .movie-content { flex: 1; }
+
+    /* ================= ROMANTIC PAGE AUTO STYLE ================= */
+
+    {% if page.title == "Romantic" %}
+
+    body {
+      background: linear-gradient(135deg, #f4d6dc, #f3f1ea);
     }
 
-    .movie-content {
-      flex: 1;
+    .content h1 {
+      font-family: Georgia, serif;
+      font-size: 60px;
+      color: #7a2e43;
+      margin-bottom: 20px;
     }
 
-    .rank-number {
-      font-size: 14px;
-      letter-spacing: 2px;
-      color: #a67c2d;
-      margin-bottom: 6px;
+    .movie {
+      box-shadow: 0 10px 35px rgba(122,46,67,0.12);
     }
+
+    .movie:hover {
+      box-shadow: 0 20px 60px rgba(122,46,67,0.25);
+    }
+
+    {% endif %}
+
+    /* ================= MOBILE ================= */
 
     @media (max-width: 768px) {
 
@@ -147,9 +160,7 @@
         padding: 30px;
       }
 
-      .logo {
-        font-size: 42px;
-      }
+      .logo { font-size: 42px; }
 
       .nav {
         flex-direction: column;
@@ -171,103 +182,12 @@
         max-width: 300px;
       }
 
-      .dropdown-content {
-        position: static;
-        box-shadow: none;
-        background: transparent;
-        padding: 0;
-      }
+    }
 
-.romantic-page {
-  background: #f5ecef;
-}
-
-/* Hero Section */
-.romantic-hero {
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #e8c7d0, #f5ecef);
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 80px;
-}
-
-.romantic-overlay {
-  text-align: center;
-  z-index: 2;
-}
-
-.romantic-hero h1 {
-  font-family: 'Georgia', serif;
-  font-size: 60px;
-  color: #7a2e43;
-  margin-bottom: 15px;
-}
-
-.romantic-hero p {
-  font-size: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-  color: #5e3a44;
-}
-
-/* Soft floating glow */
-.romantic-hero::before {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 70%);
-  top: -200px;
-  left: -200px;
-  animation: romanticFloat 8s ease-in-out infinite alternate;
-}
-
-@keyframes romanticFloat {
-  from { transform: translateY(0px); }
-  to { transform: translateY(40px); }
-}
-
-/* Romantic Movie Cards */
-.romantic-page .movie {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 18px;
-  border: none;
-  box-shadow: 0 8px 30px rgba(122,46,67,0.08);
-  margin-bottom: 50px;
-  transition: all 0.3s ease;
-}
-
-.romantic-page .movie:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 50px rgba(122,46,67,0.15);
-}
-
-.romantic-page .rank-number {
-  color: #a2455c;
-}
-
-.romantic-page h2 {
-  color: #6a2b3d;
-}
-
-@keyframes fadeInRomantic {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
   </style>
 </head>
 
-<body class="{{ page.body_class }}">
+<body>
 
 <div class="header">
   <div>
@@ -277,10 +197,7 @@
         <span>JURY</span>
       </a>
     </div>
-
-    <div class="motto">
-      No hype. Just cinema.
-    </div>
+    <div class="motto">No hype. Just cinema.</div>
   </div>
 
   <div class="nav">
@@ -289,18 +206,11 @@
     <a href="{{ '/tv-shows.html' | relative_url }}">TV Shows</a>
 
     <div class="dropdown">
-  <span onclick="toggleDropdown()">Genres</span>
-  <div class="dropdown-content" id="genreMenu">
-    <a href="{{ '/psychological.html' | relative_url }}">Psychological</a>
-    <a href="{{ '/romantic.html' | relative_url }}">Romantic</a>
-    <a href="{{ '/comfort.html' | relative_url }}">Comfort</a>
-    <a href="{{ '/drama.html' | relative_url }}">Drama</a>
-    <a href="{{ '/sports.html' | relative_url }}">Sports</a>
-    <a href="{{ '/comedy.html' | relative_url }}">Comedy</a>
-    <a href="{{ '/scifi.html' | relative_url }}">Sci-Fi</a>
-  </div>
-</div>
-
+      <span>Genres</span>
+      <div class="dropdown-content">
+        <a href="{{ '/romantic.html' | relative_url }}">Romantic</a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -309,17 +219,6 @@
 <div class="content">
   {{ content }}
 </div>
-
-<script>
-function toggleDropdown() {
-  var menu = document.getElementById("genreMenu");
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "block";
-  }
-}
-</script>
 
 </body>
 </html>
