@@ -8,42 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
-html {
-  scroll-behavior: smooth;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  min-width: 180px;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.08);
-  padding: 12px 0;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #111;
-  font-size: 13px;
-}
-
-.dropdown-content a:hover {
-  background-color: #f3f1ea;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-    
     body {
       background-color: #f3f1ea;
       margin: 0;
@@ -56,6 +24,7 @@ html {
       justify-content: space-between;
       align-items: flex-start;
       padding: 60px;
+      position: relative;
     }
 
     .logo {
@@ -77,23 +46,51 @@ html {
     }
 
     .nav {
-      text-align: right;
+      display: flex;
+      gap: 30px;
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 1px;
+      position: relative;
     }
 
-    .nav a {
-      display: block;
+    .nav a, .nav span {
       text-decoration: none;
       color: #111;
-      margin-bottom: 12px;
+      cursor: pointer;
       transition: 0.2s;
     }
 
-    .nav a:hover {
+    .nav a:hover, .nav span:hover {
       color: #a67c2d;
-      transform: translateX(-4px);
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 25px;
+      left: 0;
+      background: #fff;
+      min-width: 180px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      padding: 10px 0;
+      z-index: 10;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 13px;
+      text-decoration: none;
+      color: #111;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f3f1ea;
     }
 
     hr {
@@ -104,74 +101,81 @@ html {
 
     .content {
       padding: 100px 60px;
-      max-width: 1000px;
+      max-width: 1100px;
     }
 
-.movie {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  margin-bottom: 80px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-}
+    .movie {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      margin-bottom: 80px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
 
     .movie:hover {
-  transform: translateY(-4px);
-}
-    
-.movie img {
-  width: 180px;
-  height: auto;
-  border: 1px solid #ddd;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+      transform: translateY(-3px);
+    }
 
-.movie img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
+    .movie img {
+      width: 180px;
+      border: 1px solid #ddd;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.movie-content {
-  flex: 1;
-}
+    .movie img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
 
-.rank-number {
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #a67c2d;
-  margin-bottom: 6px;
-}
+    .movie-content {
+      flex: 1;
+    }
 
-    
+    .rank-number {
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: #a67c2d;
+      margin-bottom: 6px;
+    }
+
     @media (max-width: 768px) {
+
       .header {
         flex-direction: column;
         padding: 30px;
       }
 
-.movie {
-  flex-direction: column;
-  gap: 20px;
-}
-
-.movie img {
-  width: 100%;
-  max-width: 300px;
-}
-      
       .logo {
         font-size: 42px;
       }
 
       .nav {
-        text-align: left;
+        flex-direction: column;
+        gap: 15px;
         margin-top: 20px;
       }
 
       .content {
         padding: 60px 25px;
+      }
+
+      .movie {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .movie img {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
       }
     }
   </style>
@@ -193,20 +197,22 @@ html {
     </div>
   </div>
 
- <div class="nav">
-  <a href="{{ '/about.html' | relative_url }}">About</a>
-  <a href="{{ '/top-20.html' | relative_url }}">Movies</a>
-  <a href="{{ '/tv-shows.html' | relative_url }}">TV Shows</a>
+  <div class="nav">
+    <a href="{{ '/about.html' | relative_url }}">About</a>
+    <a href="{{ '/top-20.html' | relative_url }}">Movies</a>
+    <a href="{{ '/tv-shows.html' | relative_url }}">TV Shows</a>
 
-  <div class="dropdown">
-    <span>Genres</span>
-    <div class="dropdown-content">
-      <a href="{{ '/psychological.html' | relative_url }}">Psychological</a>
-      <a href="{{ '/drama.html' | relative_url }}">Drama</a>
-      <a href="{{ '/sports.html' | relative_url }}">Sports</a>
-      <a href="{{ '/comedy.html' | relative_url }}">Comedy</a>
-      <a href="{{ '/scifi.html' | relative_url }}">Sci-Fi</a>
+    <div class="dropdown">
+      <span onclick="toggleDropdown()">Genres</span>
+      <div class="dropdown-content" id="genreMenu">
+        <a href="{{ '/psychological.html' | relative_url }}">Psychological</a>
+        <a href="{{ '/drama.html' | relative_url }}">Drama</a>
+        <a href="{{ '/sports.html' | relative_url }}">Sports</a>
+        <a href="{{ '/comedy.html' | relative_url }}">Comedy</a>
+        <a href="{{ '/scifi.html' | relative_url }}">Sci-Fi</a>
+      </div>
     </div>
+
   </div>
 </div>
 
@@ -215,6 +221,17 @@ html {
 <div class="content">
   {{ content }}
 </div>
+
+<script>
+function toggleDropdown() {
+  var menu = document.getElementById("genreMenu");
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
 
 </body>
 </html>
