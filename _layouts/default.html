@@ -72,19 +72,17 @@
     }
 
 .movie {
-  margin-bottom: 60px;
-}
-
-.movie h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 80px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 .movie img {
-  width: 200px;
+  width: 180px;
   height: auto;
-  display: block;
-  margin-bottom: 15px;
   border: 1px solid #ddd;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -92,6 +90,17 @@
 .movie img:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.movie-content {
+  flex: 1;
+}
+
+.rank-number {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #a67c2d;
+  margin-bottom: 6px;
 }
 
     
