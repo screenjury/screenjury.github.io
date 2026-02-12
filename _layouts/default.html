@@ -206,11 +206,11 @@
     <a href="{{ '/tv-shows.html' | relative_url }}">TV Shows</a>
 
     <div class="dropdown">
-      <span>Genres</span>
-      <div class="dropdown-content">
-        <a href="{{ '/romantic.html' | relative_url }}">Romantic</a>
-      </div>
-    </div>
+  <span id="genreToggle">Genres</span>
+  <div class="dropdown-content" id="genreMenu">
+    <a href="{{ '/romantic.html' | relative_url }}">Romantic</a>
+  </div>
+</div>
   </div>
 </div>
 
@@ -220,5 +220,22 @@
   {{ content }}
 </div>
 
+  <script>
+  const toggle = document.getElementById("genreToggle");
+  const menu = document.getElementById("genreMenu");
+
+  toggle.addEventListener("click", function () {
+    if (window.innerWidth <= 768) {
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".dropdown")) {
+      menu.style.display = "none";
+    }
+  });
+</script>
+  
 </body>
 </html>
